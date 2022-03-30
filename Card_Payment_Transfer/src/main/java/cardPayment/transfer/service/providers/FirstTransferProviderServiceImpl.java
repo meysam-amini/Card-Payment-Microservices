@@ -85,7 +85,7 @@ public class FirstTransferProviderServiceImpl extends AbstractTransfeProviderSer
                                         return Mono.just(ResponseEntity.status(HttpStatus.NOT_FOUND).body("Transfer Status: " + status + "!\n" + transfer));
 
                                 }));
-            }//300 300
+            }
             // First card doesn't have enough balance or invalid card:
             else
                 return Mono.just(ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Not Enough Balance Or Wrong Card Selected"));
